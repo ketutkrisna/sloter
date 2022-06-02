@@ -1,0 +1,324 @@
+<!-- Created by Shanil Ahmed -->
+
+<!-- Created by Bad_Bit-->
+
+
+<!--
+    Title       : Slot Machine | Inspired Code
+    Version     : 1.0
+    Language    : HTML
+    Discription : Slot Machine Simulation
+    Inspired From : #AVD001 and Alex Tusinean
+    Author      : Bad_Bit
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body{
+            height:100vh;
+            width: 100%;
+        }
+        .bungkus{
+            margin-top:150px;
+            height:100%;
+        }
+        .display{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .slot{
+            background-color:lightblue;
+            border-radius:5px;
+        }
+        .value{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap-reverse;
+            width:80px;
+            height:240px;
+            /*background-color:#ddd;*/
+            /*margin:5px;*/
+            border:1px solid #eee;
+            overflow:hidden;
+            z-index:1;
+        }
+        .value div{
+            padding:0;
+            width:70px;
+            height: 80px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap-reverse;
+            font-weight:bold;
+            font-size:20px;
+            color:white;
+            z-index:2;
+        }
+
+        .spingo{
+            animation: spin .5s linear;
+        }
+        @keyframes spin{
+            0%{
+                transform: translateY(0rem);
+            }
+            100% {
+                transform: translateY(40rem);
+            }
+        }
+    </style>
+  </head>
+  <body>
+       
+       <div class="bungkus">
+        <div class="display">
+            <!-- <hr style="position:absolute;border:1px solid black;margin-top:-60px;width:300px;z-index:-233">
+            <hr style="position:absolute;border:1px solid black;margin-top:100px;width:300px;z-index:-233"> -->
+            <div class="slot">
+                <hr style="position:absolute;height:2px;background-color:white;border:0;margin-top:80px;width:400px;z-index:0;">
+                <hr style="position:absolute;height:2px;background-color:white;border:0;margin-top:160px;width:400px;z-index:0">
+                <div class="value">
+                    <div class="hasil1"><img src="img/g1.gif" width="80%"></div>
+                    <div class="hasil6"><img src="img/g5.gif" width="80%"></div>
+                    <div class="hasil11"><img src="img/g3.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g3.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="value">
+                    <div class="hasil2"><img src="img/g3.gif" width="80%"></div>
+                    <div class="hasil7"><img src="img/g6.gif" width="80%"></div>
+                    <div class="hasil12"><img src="img/g5.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="value">
+                    <div class="hasil3"><img src="img/g8.gif" width="80%"></div>
+                    <div class="hasil8"><img src="img/g3.gif" width="80%"></div>
+                    <div class="hasil13"><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g5.gif" width="80%"></div>
+                    <div><img src="img/g3.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="value">
+                    <div class="hasil4"><img src="img/g1.gif" width="80%"></div>
+                    <div class="hasil9"><img src="img/g2.gif" width="80%"></div>
+                    <div class="hasil14"><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g3.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g5.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g5.gif" width="80%"></div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="value">
+                    <div class="hasil5"><img src="img/g5.gif" width="80%"></div>
+                    <div class="hasil10"><img src="img/g1.gif" width="80%"></div>
+                    <div class="hasil15"><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g3.gif" width="80%"></div>
+                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div><img src="img/g5.gif" width="80%"></div>
+                    <div><img src="img/g6.gif" width="80%"></div>
+                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div><img src="img/g4.gif" width="80%"></div>
+                    <div><img src="img/g5.gif" width="80%"></div>
+                    <div><img src="img/g1.gif" width="80%"></div>
+                </div>
+            </div>
+        </div>
+
+            <div class="mt-2" style="display:flex;justify-content:center;">
+                <button class="btn btn-primary fw-bold spinon">SPIN</button>
+                <button class="btn btn-danger fw-bold spinstop">STOP</button>
+            </div>
+        </div>
+
+
+
+        
+    <!-- <script type="text/javascript" src="javascript.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            var dataimgacak=[
+                        '<img src="img/g5.gif" width="80%">',
+                        '<img src="img/g6.gif" width="80%">',
+                        '<img src="img/g8.gif" width="80%">',
+                        '<img src="img/g3.gif" width="80%">',
+                        '<img src="img/g1.gif" width="80%">',
+                        '<img src="img/g2.gif" width="80%">',
+                        '<img src="img/g7.gif" width="80%">',
+                        '<img src="img/g4.gif" width="80%">',
+                        ];
+            var stop=0;
+            var timestop1,timestop2,timestop3;
+            var roll1,roll2,roll3,roll4,roll5,roll6,roll7,roll8,roll9,roll10,roll11,roll12,roll13,roll14,roll15;
+            function randomroom(){
+                roll1= Math.round(Math.random()*7);
+                roll2= Math.round(Math.random()*7);
+                roll3= Math.round(Math.random()*7);
+                roll4= Math.round(Math.random()*7);
+                roll5= Math.round(Math.random()*7);
+                roll6= Math.round(Math.random()*7);
+                roll7= Math.round(Math.random()*7);
+                roll8= Math.round(Math.random()*7);
+                roll9= Math.round(Math.random()*7);
+                roll10= Math.round(Math.random()*7);
+                roll11= Math.round(Math.random()*7);
+                roll12= Math.round(Math.random()*7);
+                roll13= Math.round(Math.random()*7);
+                roll14= Math.round(Math.random()*7);
+                roll15= Math.round(Math.random()*7);
+                $('.slot:nth-child(1) .value .hasil1').html(dataimgacak[roll1])
+                $('.slot:nth-child(1) .value .hasil6').html(dataimgacak[roll6])
+                $('.slot:nth-child(1) .value .hasil11').html(dataimgacak[roll11])
+                $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
+                $('.slot:nth-child(2) .value .hasil7').html(dataimgacak[roll7])
+                $('.slot:nth-child(2) .value .hasil12').html(dataimgacak[roll12])
+                $('.slot:nth-child(3) .value .hasil3').html(dataimgacak[roll3])
+                $('.slot:nth-child(3) .value .hasil8').html(dataimgacak[roll8])
+                $('.slot:nth-child(3) .value .hasil13').html(dataimgacak[roll13])
+                $('.slot:nth-child(4) .value .hasil4').html(dataimgacak[roll4])
+                $('.slot:nth-child(4) .value .hasil9').html(dataimgacak[roll9])
+                $('.slot:nth-child(4) .value .hasil14').html(dataimgacak[roll14])
+                $('.slot:nth-child(5) .value .hasil5').html(dataimgacak[roll5])
+                $('.slot:nth-child(5) .value .hasil10').html(dataimgacak[roll10])
+                $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
+            }
+            randomroom();
+            $('.spinstop').hide();
+            $('.spinon').on('click',function(){
+                $('.spinstop').show();
+                $('.spinon').hide();
+                roll1= Math.round(Math.random()*7);
+                roll2= Math.round(Math.random()*7);
+                roll3= Math.round(Math.random()*7);
+                roll4= Math.round(Math.random()*7);
+                roll5= Math.round(Math.random()*7);
+                roll6= Math.round(Math.random()*7);
+                roll7= Math.round(Math.random()*7);
+                roll8= Math.round(Math.random()*7);
+                roll9= Math.round(Math.random()*7);
+                roll10= Math.round(Math.random()*7);
+                roll11= Math.round(Math.random()*7);
+                roll12= Math.round(Math.random()*7);
+                roll13= Math.round(Math.random()*7);
+                roll14= Math.round(Math.random()*7);
+                roll15= Math.round(Math.random()*7);
+                stop =1;
+                $('.value div').addClass('spingo');
+                $('.value div').css({
+                    'animation-play-state':'running',
+                    'animation-iteration-count':'20'
+                });
+                timestop1 = setTimeout(function() {
+                   $('.slot:nth-child(1) .value div').removeClass('spingo'); 
+                   $('.slot:nth-child(1) .value .hasil1').html(dataimgacak[roll1])
+                   $('.slot:nth-child(1) .value .hasil6').html(dataimgacak[roll6])
+                   $('.slot:nth-child(1) .value .hasil11').html(dataimgacak[roll11])
+                }, 1500);
+                timestop2 = setTimeout(function() {
+                    $('.slot:nth-child(2) .value div').removeClass('spingo'); 
+                    $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
+                    $('.slot:nth-child(2) .value .hasil7').html(dataimgacak[roll7])
+                    $('.slot:nth-child(2) .value .hasil12').html(dataimgacak[roll12])
+                }, 2000);
+                timestop3 = setTimeout(function() {
+                   $('.slot:nth-child(3) .value div').removeClass('spingo');
+                   $('.slot:nth-child(3) .value .hasil3').html(dataimgacak[roll3])
+                   $('.slot:nth-child(3) .value .hasil8').html(dataimgacak[roll8])
+                   $('.slot:nth-child(3) .value .hasil13').html(dataimgacak[roll13])
+                }, 2500);
+                timestop4 = setTimeout(function() {
+                   $('.slot:nth-child(4) .value div').removeClass('spingo');
+                   $('.slot:nth-child(4) .value .hasil4').html(dataimgacak[roll4])
+                   $('.slot:nth-child(4) .value .hasil9').html(dataimgacak[roll9])
+                   $('.slot:nth-child(4) .value .hasil14').html(dataimgacak[roll14])
+                }, 3000);
+                timestop5 = setTimeout(function() {
+                   $('.spinstop').hide();
+                   $('.spinon').show();
+                   $('.slot:nth-child(5) .value div').removeClass('spingo');
+                   $('.slot:nth-child(5) .value .hasil5').html(dataimgacak[roll5])
+                   $('.slot:nth-child(5) .value .hasil10').html(dataimgacak[roll10])
+                   $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
+                }, 3500);
+            })
+            $('.spinstop').on('click',function(){
+                stop =0;
+                $('.spinon').show();
+                $('.spinstop').hide();
+                if(stop == 0){
+                    clearTimeout(timestop1);
+                    clearTimeout(timestop2);
+                    clearTimeout(timestop3);
+                    clearTimeout(timestop4);
+                    clearTimeout(timestop5);
+                    $('.slot:nth-child(1) .value .hasil1').html(dataimgacak[roll1])
+                    $('.slot:nth-child(1) .value .hasil6').html(dataimgacak[roll6])
+                    $('.slot:nth-child(1) .value .hasil11').html(dataimgacak[roll11])
+                    $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
+                    $('.slot:nth-child(2) .value .hasil7').html(dataimgacak[roll7])
+                    $('.slot:nth-child(2) .value .hasil12').html(dataimgacak[roll12])
+                    $('.slot:nth-child(3) .value .hasil3').html(dataimgacak[roll3])
+                    $('.slot:nth-child(3) .value .hasil8').html(dataimgacak[roll8])
+                    $('.slot:nth-child(3) .value .hasil13').html(dataimgacak[roll13])
+                    $('.slot:nth-child(4) .value .hasil4').html(dataimgacak[roll4])
+                    $('.slot:nth-child(4) .value .hasil9').html(dataimgacak[roll9])
+                    $('.slot:nth-child(4) .value .hasil14').html(dataimgacak[roll14])
+                    $('.slot:nth-child(5) .value .hasil5').html(dataimgacak[roll5])
+                    $('.slot:nth-child(5) .value .hasil10').html(dataimgacak[roll10])
+                    $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
+                    $('.value div').removeClass('spingo');
+                }
+            })
+        })
+    </script>
+  </body>
+</html>
