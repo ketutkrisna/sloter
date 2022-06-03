@@ -21,8 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
         body{
-            height:100vh;
+            height:100%;
             width: 100%;
+            overflow:hidden;
         }
         .bungkus{
             margin-top:150px;
@@ -36,6 +37,7 @@
         .slot{
             background-color:lightblue;
             border-radius:5px;
+            box-shadow:3px 3px 5px rgba(0,0,0,.4);
         }
         .value{
             display:flex;
@@ -51,8 +53,8 @@
             z-index:1;
         }
         .value div{
-            padding:0;
-            width:70px;
+            padding:0px;
+            width:80px;
             height: 80px;
             display:flex;
             justify-content:center;
@@ -60,10 +62,12 @@
             flex-wrap:wrap-reverse;
             font-weight:bold;
             font-size:20px;
-            color:white;
+            /*background-color:white;*/
             z-index:2;
         }
-
+        .sama{
+            transform:rotate(30deg);
+        }
         .spingo{
             animation: spin .5s linear;
         }
@@ -81,93 +85,91 @@
        
        <div class="bungkus">
         <div class="display">
-            <!-- <hr style="position:absolute;border:1px solid black;margin-top:-60px;width:300px;z-index:-233">
-            <hr style="position:absolute;border:1px solid black;margin-top:100px;width:300px;z-index:-233"> -->
             <div class="slot">
                 <hr style="position:absolute;height:2px;background-color:white;border:0;margin-top:80px;width:400px;z-index:0;">
-                <hr style="position:absolute;height:2px;background-color:white;border:0;margin-top:160px;width:400px;z-index:0">
+                <hr style="position:absolute;height:2px;background-color:white;border:0;margin-top:160px;width:400px;z-index:0;">
                 <div class="value">
-                    <div class="hasil1"><img src="img/g1.gif" width="80%"></div>
-                    <div class="hasil6"><img src="img/g5.gif" width="80%"></div>
-                    <div class="hasil11"><img src="img/g3.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g3.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
+                    <div class="hasil11"><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div class="hasil6"><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div class="hasil1"><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
                 </div>
             </div>
             <div class="slot">
                 <div class="value">
-                    <div class="hasil2"><img src="img/g3.gif" width="80%"></div>
-                    <div class="hasil7"><img src="img/g6.gif" width="80%"></div>
-                    <div class="hasil12"><img src="img/g5.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
+                    <div class="hasil12"><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div class="hasil7"><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div class="hasil2"><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
                 </div>
             </div>
             <div class="slot">
                 <div class="value">
-                    <div class="hasil3"><img src="img/g8.gif" width="80%"></div>
-                    <div class="hasil8"><img src="img/g3.gif" width="80%"></div>
-                    <div class="hasil13"><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g5.gif" width="80%"></div>
-                    <div><img src="img/g3.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
+                    <div class="hasil13"><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div class="hasil8"><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div class="hasil3"><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
                 </div>
             </div>
             <div class="slot">
                 <div class="value">
-                    <div class="hasil4"><img src="img/g1.gif" width="80%"></div>
-                    <div class="hasil9"><img src="img/g2.gif" width="80%"></div>
-                    <div class="hasil14"><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g3.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g5.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g5.gif" width="80%"></div>
+                    <div class="hasil14"><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div class="hasil9"><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div class="hasil4"><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g5.gif" width="80%" height="80%"></div>
                 </div>
             </div>
             <div class="slot">
                 <div class="value">
-                    <div class="hasil5"><img src="img/g5.gif" width="80%"></div>
-                    <div class="hasil10"><img src="img/g1.gif" width="80%"></div>
-                    <div class="hasil15"><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g3.gif" width="80%"></div>
-                    <div><img src="img/g8.gif" width="80%"></div>
-                    <div><img src="img/g7.gif" width="80%"></div>
-                    <div><img src="img/g5.gif" width="80%"></div>
-                    <div><img src="img/g6.gif" width="80%"></div>
-                    <div><img src="img/g2.gif" width="80%"></div>
-                    <div><img src="img/g4.gif" width="80%"></div>
-                    <div><img src="img/g5.gif" width="80%"></div>
-                    <div><img src="img/g1.gif" width="80%"></div>
+                    <div class="hasil15"><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div class="hasil10"><img src="img/g1.gif" width="80%" height="80%"></div>
+                    <div class="hasil5"><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g3.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g8.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g7.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g6.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g2.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g4.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g5.gif" width="80%" height="80%"></div>
+                    <div><img src="img/g1.gif" width="80%" height="80%"></div>
                 </div>
             </div>
         </div>
@@ -178,6 +180,13 @@
             </div>
         </div>
 
+        <audio id="csfff">
+          <source src="audio/csfff.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="reelstop">
+          <source src="audio/reelstop.mp3" type="audio/mpeg">
+        </audio>
+
 
 
         
@@ -187,14 +196,14 @@
     <script>
         $(function(){
             var dataimgacak=[
-                        '<img src="img/g5.gif" width="80%">',
-                        '<img src="img/g6.gif" width="80%">',
-                        '<img src="img/g8.gif" width="80%">',
-                        '<img src="img/g3.gif" width="80%">',
-                        '<img src="img/g1.gif" width="80%">',
-                        '<img src="img/g2.gif" width="80%">',
-                        '<img src="img/g7.gif" width="80%">',
-                        '<img src="img/g4.gif" width="80%">',
+                        '<img class="perkalian5" data-perkalian="5" src="img/g5.gif" width="80%" height="80%">',
+                        '<img class="perkalian6" data-perkalian="6" src="img/g6.gif" width="80%" height="80%">',
+                        '<img class="perkalian8" data-perkalian="8" src="img/g8.gif" width="80%" height="80%">',
+                        '<img class="perkalian3" data-perkalian="3" src="img/g3.gif" width="80%" height="80%">',
+                        '<img class="perkalian1" data-perkalian="1" src="img/g1.gif" width="80%" height="80%">',
+                        '<img class="perkalian2" data-perkalian="2" src="img/g2.gif" width="80%" height="80%">',
+                        '<img class="perkalian7" data-perkalian="7" src="img/g7.gif" width="80%" height="80%">',
+                        '<img class="perkalian4" data-perkalian="4" src="img/g4.gif" width="80%" height="80%">',
                         ];
             var stop=0;
             var timestop1,timestop2,timestop3;
@@ -232,10 +241,21 @@
                 $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
             }
             randomroom();
+
             $('.spinstop').hide();
             $('.spinon').on('click',function(){
+                var audiotime=document.getElementById('reelstop');
+                // audiotime.currentTime = 0;
                 $('.spinstop').show();
                 $('.spinon').hide();
+                for(var clear = 1;clear<16;clear++){
+                    $('.hasil'+clear+' img').css({
+                        'transform':'scale(1) rotate(0deg)',
+                        'trasition':'.7s',
+                        'background-color':'lightblue',
+                        'border-radius':'50%'
+                    })
+                }
                 roll1= Math.round(Math.random()*7);
                 roll2= Math.round(Math.random()*7);
                 roll3= Math.round(Math.random()*7);
@@ -257,41 +277,1255 @@
                     'animation-play-state':'running',
                     'animation-iteration-count':'20'
                 });
+                // var perkalian1=$('.hasil1').attr('perkalianitem',roll1)
+                // var perkalian6=$('.hasil6').attr('perkalianitem',roll6)
+                // var perkalian11=$('.hasil11').attr('perkalianitem',roll11)
+                // var perkalian2=$('.hasil2').attr('perkalianitem',roll2);
+                // var perkalian7=$('.hasil7').attr('perkalianitem',roll7);
+                // var perkalian12=$('.hasil12').attr('perkalianitem',roll12);
+                // var perkalian3=$('.hasil3').attr('perkalianitem',roll3);
+                // var perkalian8=$('.hasil8').attr('perkalianitem',roll8);
+                // var perkalian13=$('.hasil13').attr('perkalianitem',roll13);
+                // var perkalian4=$('.hasil4').attr('perkalianitem',roll4);
+                // var perkalian9=$('.hasil9').attr('perkalianitem',roll9);
+                // var perkalian14=$('.hasil14').attr('perkalianitem',roll14);
+                // var perkalian5=$('.hasil5').attr('perkalianitem',roll5);
+                // var perkalian10=$('.hasil10').attr('perkalianitem',roll10);
+                // var perkalian15=$('.hasil15').attr('perkalianitem',roll15);
                 timestop1 = setTimeout(function() {
+                   $('#reelstop')[0].play()
+                   audiotime.currentTime = 0;
                    $('.slot:nth-child(1) .value div').removeClass('spingo'); 
                    $('.slot:nth-child(1) .value .hasil1').html(dataimgacak[roll1])
                    $('.slot:nth-child(1) .value .hasil6').html(dataimgacak[roll6])
                    $('.slot:nth-child(1) .value .hasil11').html(dataimgacak[roll11])
+                   // console.log(perkalian1)
+                   // console.log(perkalian6)
+                   // console.log(perkalian11)
                 }, 1500);
                 timestop2 = setTimeout(function() {
-                    $('.slot:nth-child(2) .value div').removeClass('spingo'); 
-                    $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
-                    $('.slot:nth-child(2) .value .hasil7').html(dataimgacak[roll7])
-                    $('.slot:nth-child(2) .value .hasil12').html(dataimgacak[roll12])
+                   $('#reelstop')[0].play()
+                   audiotime.currentTime = 0;
+                   $('.slot:nth-child(2) .value div').removeClass('spingo'); 
+                   $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
+                   $('.slot:nth-child(2) .value .hasil7').html(dataimgacak[roll7])
+                   $('.slot:nth-child(2) .value .hasil12').html(dataimgacak[roll12])
+                   // console.log(perkalian2)
+                   // console.log(perkalian7)
+                   // console.log(perkalian12)
                 }, 2000);
                 timestop3 = setTimeout(function() {
+                   $('#reelstop')[0].play()
+                   audiotime.currentTime = 0;
                    $('.slot:nth-child(3) .value div').removeClass('spingo');
                    $('.slot:nth-child(3) .value .hasil3').html(dataimgacak[roll3])
                    $('.slot:nth-child(3) .value .hasil8').html(dataimgacak[roll8])
                    $('.slot:nth-child(3) .value .hasil13').html(dataimgacak[roll13])
+                   // console.log(perkalian3)
+                   // console.log(perkalian8)
+                   // console.log(perkalian13)
                 }, 2500);
                 timestop4 = setTimeout(function() {
+                   $('#reelstop')[0].play()
+                   audiotime.currentTime = 0;
                    $('.slot:nth-child(4) .value div').removeClass('spingo');
                    $('.slot:nth-child(4) .value .hasil4').html(dataimgacak[roll4])
                    $('.slot:nth-child(4) .value .hasil9').html(dataimgacak[roll9])
                    $('.slot:nth-child(4) .value .hasil14').html(dataimgacak[roll14])
+                   // console.log(perkalian4)
+                   // console.log(perkalian9)
+                   // console.log(perkalian14)
                 }, 3000);
                 timestop5 = setTimeout(function() {
+                   $('#reelstop')[0].play()
+                   audiotime.currentTime = 0;
                    $('.spinstop').hide();
                    $('.spinon').show();
                    $('.slot:nth-child(5) .value div').removeClass('spingo');
                    $('.slot:nth-child(5) .value .hasil5').html(dataimgacak[roll5])
                    $('.slot:nth-child(5) .value .hasil10').html(dataimgacak[roll10])
                    $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
+                   // console.log($('.hasil1').data('perkalianitem'))
+                   // console.log(perkalian10)
+                   console.log(roll1)
+
+                   // roll kiri ke kanan
+                   if(roll1==roll2&&roll1==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll2&&roll1==roll3&&roll1==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll2&&roll1==roll3&&roll1==roll4&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll1==roll2&&roll1==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll2&&roll1==roll8&&roll1==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll2&&roll1==roll8&&roll1==roll4&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll1==roll7&&roll1==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll7&&roll1==roll13&&roll1==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll7&&roll1==roll13&&roll1==roll9&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll5==roll4&&roll5==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll4&&roll5==roll3&&roll5==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil5 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll5==roll4&&roll5==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll4&&roll5==roll8&&roll5==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll5==roll9&&roll5==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll9&&roll5==roll13&&roll5==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil5 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+
+
+                   // roll kiri ke kanan
+                   if(roll6==roll7&&roll6==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll7&&roll6==roll8&&roll6==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll7&&roll6==roll8&&roll6==roll9&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll6==roll2&&roll6==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll2&&roll6==roll3&&roll6==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll2&&roll6==roll3&&roll6==roll4&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll6==roll12&&roll6==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll12&&roll6==roll13&&roll6==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll12&&roll6==roll13&&roll6==roll14&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll10==roll9&&roll10==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll9&&roll10==roll8&&roll10==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll10==roll4&&roll10==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll4&&roll10==roll3&&roll10==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll10==roll14&&roll10==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll14&&roll10==roll13&&roll10==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+
+
+
+                   // roll kiri ke kanan
+                   if(roll11==roll12&&roll11==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll12&&roll11==roll13&&roll11==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll12&&roll11==roll13&&roll11==roll14&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll11==roll12&&roll11==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll12&&roll11==roll8&&roll11==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll12&&roll11==roll8&&roll11==roll14&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll11==roll7&&roll11==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll7&&roll11==roll3&&roll11==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll7&&roll11==roll3&&roll11==roll9&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll15==roll14&&roll15==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll14&&roll15==roll13&&roll15==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll15==roll14&&roll15==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll14&&roll15==roll8&&roll15==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll15==roll9&&roll15==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll9&&roll15==roll3&&roll15==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
                 }, 3500);
             })
             $('.spinstop').on('click',function(){
                 stop =0;
+                $('#reelstop')[0].play();
                 $('.spinon').show();
                 $('.spinstop').hide();
                 if(stop == 0){
@@ -316,6 +1550,1178 @@
                     $('.slot:nth-child(5) .value .hasil10').html(dataimgacak[roll10])
                     $('.slot:nth-child(5) .value .hasil15').html(dataimgacak[roll15])
                     $('.value div').removeClass('spingo');
+                    // roll kiri ke kanan
+                   if(roll1==roll2&&roll1==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll2&&roll1==roll3&&roll1==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll2&&roll1==roll3&&roll1==roll4&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll1==roll2&&roll1==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll2&&roll1==roll8&&roll1==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll2&&roll1==roll8&&roll1==roll4&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll1==roll7&&roll1==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil1 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll1==roll7&&roll1==roll13&&roll1==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll1==roll7&&roll1==roll13&&roll1==roll9&&roll1==roll5){
+                                $('#csfff')[0].play()
+                                $('.hasil1 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil5 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll5==roll4&&roll5==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll4&&roll5==roll3&&roll5==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil5 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll5==roll4&&roll5==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll4&&roll5==roll8&&roll5==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil1 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll5==roll9&&roll5==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil5 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll5==roll9&&roll5==roll13&&roll5==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil5 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+
+
+                   // roll kiri ke kanan
+                   if(roll6==roll7&&roll6==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll7&&roll6==roll8&&roll6==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll7&&roll6==roll8&&roll6==roll9&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll6==roll2&&roll6==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil2 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll2&&roll6==roll3&&roll6==roll4){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll2&&roll6==roll3&&roll6==roll4&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil2 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil4 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll6==roll12&&roll6==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil6 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll6==roll12&&roll6==roll13&&roll6==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil6 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll6==roll12&&roll6==roll13&&roll6==roll14&&roll6==roll10){
+                                $('#csfff')[0].play()
+                                $('.hasil6 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil10 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll10==roll9&&roll10==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll9&&roll10==roll8&&roll10==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll10==roll4&&roll10==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil4 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll4&&roll10==roll3&&roll10==roll2){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil4 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil2 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll10==roll14&&roll10==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil10 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll10==roll14&&roll10==roll13&&roll10==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil10 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+
+
+
+                   // roll kiri ke kanan
+                   if(roll11==roll12&&roll11==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll12&&roll11==roll13&&roll11==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll12&&roll11==roll13&&roll11==roll14&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil13 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll11==roll12&&roll11==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil12 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll12&&roll11==roll8&&roll11==roll14){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll12&&roll11==roll8&&roll11==roll14&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil12 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil8 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil14 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   if(roll11==roll7&&roll11==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil11 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil7 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll11==roll7&&roll11==roll3&&roll11==roll9){
+                            $('#csfff')[0].play()
+                            $('.hasil11 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            if(roll11==roll7&&roll11==roll3&&roll11==roll9&&roll11==roll15){
+                                $('#csfff')[0].play()
+                                $('.hasil11 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil7 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil3 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil9 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                                $('.hasil15 img').css({
+                                    'transform':'scale(1.1) rotate(15deg)',
+                                    'trasition':'.7s',
+                                    'background-color':'orange',
+                                    'border-radius':'50%'
+                                })
+                            }
+                        }
+                   }
+                   // roll kanan ke kiri
+                   if(roll15==roll14&&roll15==roll13){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil13 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll14&&roll15==roll13&&roll15==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil13 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll15==roll14&&roll15==roll8){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil14 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil8 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll14&&roll15==roll8&&roll15==roll12){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil14 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil8 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil12 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
+                   if(roll15==roll9&&roll15==roll3){
+                        $('#csfff')[0].play()
+                        $('.hasil15 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil9 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        $('.hasil3 img').css({
+                            'transform':'scale(1.1) rotate(15deg)',
+                            'trasition':'.7s',
+                            'background-color':'orange',
+                            'border-radius':'50%'
+                        })
+                        if(roll15==roll9&&roll11==roll3&&roll15==roll7){
+                            $('#csfff')[0].play()
+                            $('.hasil15 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil9 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil3 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                            $('.hasil7 img').css({
+                                'transform':'scale(1.1) rotate(15deg)',
+                                'trasition':'.7s',
+                                'background-color':'orange',
+                                'border-radius':'50%'
+                            })
+                        }
+                   }
                 }
             })
         })
