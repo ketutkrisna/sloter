@@ -69,7 +69,7 @@
             transform:rotate(30deg);
         }
         .spingo{
-            animation: spin .5s linear;
+            animation: spin .3s linear;
         }
         @keyframes spin{
             0%{
@@ -186,6 +186,12 @@
         <audio id="reelstop">
           <source src="audio/reelstop.mp3" type="audio/mpeg">
         </audio>
+        <audio id="btnspin">
+          <source src="audio/btnspin.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="btnstop">
+          <source src="audio/btnstop.mp3" type="audio/mpeg">
+        </audio>
 
 
 
@@ -243,9 +249,12 @@
             randomroom();
 
             $('.spinstop').hide();
+            var audiotime=document.getElementById('reelstop');
+            var btnspin=document.getElementById('btnspin');
+            var btnstop=document.getElementById('btnstop');
             $('.spinon').on('click',function(){
-                var audiotime=document.getElementById('reelstop');
-                // audiotime.currentTime = 0;
+                $('#btnspin')[0].play()
+                btnspin.currentTime = 0;
                 $('.spinstop').show();
                 $('.spinon').hide();
                 for(var clear = 1;clear<16;clear++){
@@ -293,7 +302,7 @@
                 // var perkalian10=$('.hasil10').attr('perkalianitem',roll10);
                 // var perkalian15=$('.hasil15').attr('perkalianitem',roll15);
                 timestop1 = setTimeout(function() {
-                   $('#reelstop')[0].play()
+                   $('#reelstop')[0].play();
                    audiotime.currentTime = 0;
                    $('.slot:nth-child(1) .value div').removeClass('spingo'); 
                    $('.slot:nth-child(1) .value .hasil1').html(dataimgacak[roll1])
@@ -302,9 +311,9 @@
                    // console.log(perkalian1)
                    // console.log(perkalian6)
                    // console.log(perkalian11)
-                }, 1500);
+                }, 1000);
                 timestop2 = setTimeout(function() {
-                   $('#reelstop')[0].play()
+                   $('#reelstop')[0].play();
                    audiotime.currentTime = 0;
                    $('.slot:nth-child(2) .value div').removeClass('spingo'); 
                    $('.slot:nth-child(2) .value .hasil2').html(dataimgacak[roll2])
@@ -313,9 +322,9 @@
                    // console.log(perkalian2)
                    // console.log(perkalian7)
                    // console.log(perkalian12)
-                }, 2000);
+                }, 1350);
                 timestop3 = setTimeout(function() {
-                   $('#reelstop')[0].play()
+                   $('#reelstop')[0].play();
                    audiotime.currentTime = 0;
                    $('.slot:nth-child(3) .value div').removeClass('spingo');
                    $('.slot:nth-child(3) .value .hasil3').html(dataimgacak[roll3])
@@ -324,9 +333,9 @@
                    // console.log(perkalian3)
                    // console.log(perkalian8)
                    // console.log(perkalian13)
-                }, 2500);
+                }, 1700);
                 timestop4 = setTimeout(function() {
-                   $('#reelstop')[0].play()
+                   $('#reelstop')[0].play();
                    audiotime.currentTime = 0;
                    $('.slot:nth-child(4) .value div').removeClass('spingo');
                    $('.slot:nth-child(4) .value .hasil4').html(dataimgacak[roll4])
@@ -335,9 +344,9 @@
                    // console.log(perkalian4)
                    // console.log(perkalian9)
                    // console.log(perkalian14)
-                }, 3000);
+                }, 2050);
                 timestop5 = setTimeout(function() {
-                   $('#reelstop')[0].play()
+                   $('#reelstop')[0].play();
                    audiotime.currentTime = 0;
                    $('.spinstop').hide();
                    $('.spinon').show();
@@ -664,13 +673,13 @@
                         })
                         if(roll5==roll4&&roll5==roll8&&roll5==roll2){
                             $('#csfff')[0].play()
-                            $('.hasil1 img').css({
+                            $('.hasil5 img').css({
                                 'transform':'scale(1.1) rotate(15deg)',
                                 'trasition':'.7s',
                                 'background-color':'orange',
                                 'border-radius':'50%'
                             })
-                            $('.hasil2 img').css({
+                            $('.hasil4 img').css({
                                 'transform':'scale(1.1) rotate(15deg)',
                                 'trasition':'.7s',
                                 'background-color':'orange',
@@ -682,7 +691,7 @@
                                 'background-color':'orange',
                                 'border-radius':'50%'
                             })
-                            $('.hasil4 img').css({
+                            $('.hasil2 img').css({
                                 'transform':'scale(1.1) rotate(15deg)',
                                 'trasition':'.7s',
                                 'background-color':'orange',
@@ -1521,11 +1530,12 @@
                             })
                         }
                    }
-                }, 3500);
+                }, 2400);
             })
             $('.spinstop').on('click',function(){
                 stop =0;
-                $('#reelstop')[0].play();
+                $('#btnstop')[0].play();
+                btnstop.currentTime = 0;
                 $('.spinon').show();
                 $('.spinstop').hide();
                 if(stop == 0){
@@ -1552,7 +1562,7 @@
                     $('.value div').removeClass('spingo');
                     // roll kiri ke kanan
                    if(roll1==roll2&&roll1==roll3){
-                        $('#csfff')[0].play()
+                        $('#csfff')[0].play();
                         $('.hasil1 img').css({
                             'transform':'scale(1.1) rotate(15deg)',
                             'trasition':'.7s',
